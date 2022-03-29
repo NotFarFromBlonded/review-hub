@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color:white;
+}
+
+a.hover {
+  color:white;
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +55,62 @@
     transform: rotate(360deg);
   }
 }
+
+/* unvisited link */
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.card {
+  width: 70%;
+}
+
+.click{
+  border:thin;
+  background: border-box;
+  color: dimgray;
+}
+
+.clickEmoji{
+  border:thin;
+  background: border-box;
+  color: dimgray;
+}
+
+.click:hover{
+  color: black;
+  text-decoration-line: underline;
+}
+
+.click:focus{
+  outline: none;
+}
+
+.clickEmoji:hover{
+  color: black
+}
+
+.clickEmoji:focus{
+  outline: none;
+}
+
+
