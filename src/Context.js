@@ -98,6 +98,8 @@ const Context = ({children}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(size);
+        console.log(item);
         if(size===0||size===""||item===""){
             setTheArray([])
         } else {
@@ -113,13 +115,7 @@ const Context = ({children}) => {
                   })
                 }
                 else if(res === "full"){
-                    scrappedData().then((res)=>{
-                        setReviews(res);
-                    }).then(()=>{
-                        setLoading(false);
-                    }).then(()=>{
-                        setSubmitting(false);
-                    })
+                    setisScrapped(true);
                 }
             })
         }

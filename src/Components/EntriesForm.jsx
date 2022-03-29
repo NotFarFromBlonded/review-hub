@@ -43,8 +43,8 @@ const EntriesForm = () => {
                                 <button type="submit" className="btn btn-primary mr-1" disabled={loading}>Submit</button>
                             </div>
                             <div>
-                                {(theArray.length===0)?<button type="button" className="btn btn-success mr-1" disabled={(theArray.length===0)}>Export as CSV</button>:<CSVLink data = {theArray} headers = {headers} className={classes.csv} filename={`ReviewHubContent.csv`}><button type="button" className="btn btn-success mr-1" disabled={(theArray.length===0)}>Export as CSV</button></CSVLink>}
-                                {(theArray.length===0)?<button type="button" className="btn btn-warning mr-1" disabled={(theArray.length===0)}>Export as JSON</button>:<a href={`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(theArray))}`} download={`${item}.txt`} styles={{color:"white"}}><button type="button" className="btn btn-warning mr-1" disabled={(theArray.length===0)}>Export as JSON</button></a>}
+                                {(theArray.length===0)?<button type="button" className="btn btn-success mr-1" disabled={(theArray.length===0)||loading}>Export as CSV</button>:<CSVLink data = {theArray} headers = {headers} className={classes.csv} filename={`ReviewHubContent.csv`}><button type="button" className="btn btn-success mr-1" disabled={(theArray.length===0)||loading}>Export as CSV</button></CSVLink>}
+                                {(theArray.length===0)?<button type="button" className="btn btn-warning mr-1" disabled={(theArray.length===0)||loading}>Export as JSON</button>:<a href={`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(theArray))}`} download={`${item}.txt`} styles={{color:"white"}}><button type="button" className="btn btn-warning mr-1" disabled={(theArray.length===0)||loading}>Export as JSON</button></a>}
                             </div>
                         </div>
                     </form>

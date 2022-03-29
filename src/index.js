@@ -4,10 +4,9 @@ import App from './App';
 import Context from './Context';
 
 ReactDOM.render(
-  <React.StrictMode>
+  
       <Context>
         <App />
-      </Context>
-  </React.StrictMode>,
+      </Context>,
   document.getElementById('root')
 );
