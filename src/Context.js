@@ -145,6 +145,7 @@ const Context = ({children}) => {
         return method.data;
     }
 
+    // eslint-disable-next-line no-unused-vars
     const { data: poll, status } = useQuery(["poll", contract?.id], fakePoll, {
         initialData: { status: "False" },
         refetchInterval: refetchInterval,
@@ -158,6 +159,7 @@ const Context = ({children}) => {
         },
     });
 
+    // eslint-disable-next-line no-unused-vars
     const { data: scrappeddata} = useQuery("scrappedData", scrappedData, {
         initialData: { data: [] },
         enabled: isScrapped,
