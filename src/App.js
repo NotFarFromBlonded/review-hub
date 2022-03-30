@@ -9,7 +9,7 @@ function App() {
   const useStyles  = makeStyles(()=>({
     App: {
       minHeight: "100vh",
-      backgroundColor: "whitesmoke"
+      backgroundColor: "#191919"
     },
   }));
   const classes = useStyles();

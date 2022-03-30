@@ -3,7 +3,7 @@ import {Box, Container, Typography, makeStyles} from '@material-ui/core';
 
 const useStyles = makeStyles(()=>({
     secondaryText: {
-        color:"dimgray"
+        color:"white"
     },
     hub: {
         backgroundColor: "gold",
@@ -13,7 +13,8 @@ const useStyles = makeStyles(()=>({
         margin: "0px 2px 0px 2px"
     },
     review: {
-        marginRight: "5px"
+        marginRight: "5px",
+        color: "white",
     }
 }))
 

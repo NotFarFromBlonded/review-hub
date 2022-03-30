@@ -25,16 +25,16 @@ const EntriesForm = () => {
 
     return (
         <ThemeProvider theme = {theme}>
-            <div className="card m-3 mx-auto" >
-                <div className="card-body">
+            <div className="card m-3 mx-auto" style={{backgroundColor:"black", borderRadius: "0.5rem"}}>
+                <div className="card-body" style={{background:"black", borderRadius: "0.25rem"}}>
                     <form onSubmit={handleSubmit}>
                         <div className="form-row">
                             <div className="form-group col">
-                                <label>Item</label>
+                                <label style={{color:"white"}}>Item</label>
                                 <input name="item" type="text" {...bindItem} className="form-control"/>
                             </div>
                             <div className="form-group col">
-                                <label>No. of Entries</label>
+                                <label style={{color:"white"}}>No. of Entries</label>
                                 <input name="noOfEntries" type="number" {...bindSize} className="form-control"/>
                             </div>
                         </div>

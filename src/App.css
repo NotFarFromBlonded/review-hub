@@ -87,17 +87,17 @@ a:active {
 .click{
   border:thin;
   background: border-box;
-  color: dimgray;
+  color: #d5d516;
 }
 
 .clickEmoji{
   border:thin;
   background: border-box;
-  color: dimgray;
+  color: #cb1456;
 }
 
 .click:hover{
-  color: black;
+  color: #d5d516;
   text-decoration-line: underline;
 }
 
@@ -106,11 +106,24 @@ a:active {
 }
 
 .clickEmoji:hover{
-  color: black
+  color: #eb1111;
 }
 
 .clickEmoji:focus{
   outline: none;
 }
 
+.MuiPaper-root{
+  border: 1px solid #ffffff4a;
+}
+
+.MuiTableCell-stickyHeader{
+  background-color: #191919;
+  border: 1px solid #ffffff4a;
+}
+
+.MuiSelect-select{
+  padding-right: 24px;
+  border: 1px solid white
+}
 

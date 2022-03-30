@@ -6,7 +6,6 @@ import {
     ThemeProvider,
     Container,
     TableContainer,
-    CircularProgress,
     TableHead,
     TableRow,
     Table,
@@ -29,7 +28,8 @@ const useStyles = makeStyles(()=>({
         backgroundColor: "black"
     },
     columnshead: {
-        color: "black",
+        backgroundColor: 'black',
+        color: "white",
         fontFamily: ['"B612 Mono"','monospace'].join(','),
         fontWeight: "bold",
     },
@@ -41,8 +41,19 @@ const useStyles = makeStyles(()=>({
     },
     container: {
         maxHeight: 440,
-    }
-   
+        backgroundColor: '#191919',
+    },
+    rowNew: {
+        color: 'white',
+        border: '1px solid #ffffff4a'
+    },
+    pagination: {
+        background: 'black',
+        color: 'white'
+    },
+    table: {
+        marginTop: '4rem',
+    }  
 }))
 
 const ReviewTable = () => {
@@ -68,16 +79,12 @@ const ReviewTable = () => {
 
     return (
         <ThemeProvider theme = {theme}>
-            <div>
+            <div className={classes.table}>
             <Container style={{ textAlign: 'center' }} >
                 <Paper >
-                {((loading) ? (
-                    <CircularProgress className={classes.progress} />
-                ) : ((theArray.length===0)?"":(
-                     <>
                         <TableContainer className={classes.container}>
-                            <Table stickyHeader aria-label="sticky table">
-                                <TableHead className={classes.tablehead}>
+                            <Table stickyHeader aria-label="sticky table" >
+                                <TableHead >
                                     <TableRow>
                                     {['No.', 'By', 'Item Name', 'Rating', 'Rating Head', 'Comment'].map((column) => (
                                         <TableCell
@@ -92,19 +99,20 @@ const ReviewTable = () => {
                                     ))}
                                     </TableRow>
                                 </TableHead>
-                                <TableBody>
+                                <TableBody >
                                     {
                                         theArray.slice(
                                             page * rowsPerPage,
                                             page * rowsPerPage + rowsPerPage
                                         ).map((row, index) => {
                                             return(
-                                                <TableRow key = {index}>
+                                                <TableRow key = {index} >
                                                     <TableCell
                                                         component="th"
                                                         scope="row"
                                                         align="left"
                                                         key = {row.noid}
+                                                        className={classes.rowNew}
                                                     >
                                                         <div style={{ display: 'flex' }}>
                                                             <span>{row.no}</span>
@@ -113,6 +121,7 @@ const ReviewTable = () => {
                                                     <TableCell
                                                         align="left"
                                                         key = {row.byid}
+                                                        className={classes.rowNew}
                                                     >
                                                         <div style={{display: 'flex'}}>
                                                             <span>{row.by}</span>
@@ -121,6 +130,7 @@ const ReviewTable = () => {
                                                     <TableCell
                                                         align="center"
                                                         key = {row.itemnameid}
+                                                        className={classes.rowNew}
                                                     >
                                                         <div style={{display: 'flex'}}>
                                                             <span>{row.item_name}</span>
@@ -129,6 +139,7 @@ const ReviewTable = () => {
                                                     <TableCell
                                                         align="center"
                                                         key = {row.ratingid}
+                                                        className={classes.rowNew}
                                                     >
                                                         <div>
                                                             <span>{row.rating}</span>
@@ -137,6 +148,7 @@ const ReviewTable = () => {
                                                     <TableCell
                                                         align="justify"
                                                         key = {row.ratingheadid}
+                                                        className={classes.rowNew}
                                                     >
                                                         <div style={{display: 'flex'}}>
                                                             <p>{row.rating_head}</p>
@@ -145,6 +157,7 @@ const ReviewTable = () => {
                                                     <TableCell
                                                         align="justify"
                                                         key = {row.ratingtextid}
+                                                        className={classes.rowNew}
                                                     >
                                                         <div>
                                                             <p>{row.rating_text}</p>
@@ -165,9 +178,8 @@ const ReviewTable = () => {
                             page={page}
                             onPageChange={handleChangePage}
                             onRowsPerPageChange={handleChangeRowsPerPage}
+                            className = {classes.pagination}
                         />
-                    </>
-                )))}
                 </Paper>
             </Container>
             
