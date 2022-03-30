@@ -113,17 +113,6 @@ a:active {
   outline: none;
 }
 
-.MuiPaper-root{
-  border: 1px solid #ffffff4a;
+.btn{
+  padding: 6px 10px 6px 10px;
 }
-
-.MuiTableCell-stickyHeader{
-  background-color: #191919;
-  border: 1px solid #ffffff4a;
-}
-
-.MuiSelect-select{
-  padding-right: 24px;
-  border: 1px solid white
-}
-
