@@ -25,7 +25,7 @@ const EntriesForm = () => {
 
     return (
         <ThemeProvider theme = {theme}>
-            <div className="card m-3 mx-auto" style={{backgroundColor:"black", borderRadius: "0.5rem", minWidth: "360px"}}>
+            <div className="card m-3 mx-auto" style={{backgroundColor:"black", borderRadius: "0.5rem", minWidth: "360px", maxWidth: "720px"}}>
                 <div className="card-body" style={{background:"black", borderRadius: "0.25rem"}}>
                     <form onSubmit={handleSubmit}>
                         <div className="form-row">

@@ -116,3 +116,8 @@ a:active {
 .btn{
   padding: 6px 10px 6px 10px;
 }
+
+.card-body{
+  padding-left: 10px;
+  padding-right: 10px;
+}
