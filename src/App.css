@@ -105,14 +105,6 @@ a:active {
   outline: none;
 }
 
-.clickEmoji:hover{
-  color: #eb1111;
-}
-
-.clickEmoji:focus{
-  outline: none;
-}
-
 .btn{
   padding: 6px 10px 6px 10px;
 }
