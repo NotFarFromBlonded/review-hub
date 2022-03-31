@@ -25,9 +25,7 @@ const Front = () => {
     const handleClickDebashish = () => {
         window.open("http://www.github.com/NotFarFromBlonded");
     };
-    const handleClickEmoji = () =>{
-        window.open("https://www.youtube.com/watch?v=m4cpJzJrA4I")
-    }
+    
     const classes = useStyles();
     return (
         <div>   
@@ -56,7 +54,7 @@ const Front = () => {
                         component="p"
                         className = {classes.secondaryText}
                     >
-                        Developed with <button className="clickEmoji" onClick={handleClickEmoji}><span>&#10084;</span></button> by <button className = "click" onClick={handleClickShashwat}>bansal247</button> and <button className = "click" onClick={handleClickDebashish}>NotFarFromBlonded</button>  
+                        Developed with by <button className = "click" onClick={handleClickShashwat}>bansal247</button> and <button className = "click" onClick={handleClickDebashish}>NotFarFromBlonded</button>  
                     </Typography>
                 </Container>
             </Box>    
